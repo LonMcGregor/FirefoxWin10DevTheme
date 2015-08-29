@@ -1,0 +1,48 @@
+toolbarbutton.toolbarbutton-1.aios-tbutton:not(#downloads-button) {
+  list-style-image: url("chrome://aios/skin/icons/toolbar_windows_inverted.png");
+}
+
+toolbar#aios-toolbar toolbarbutton{
+  border: none;
+}
+
+deck iframe#tab-view {
+  background: none;
+}
+
+toolbaritem#ctraddon_puib_separator {
+  background: none;
+}
+
+#TabsToolbar toolbarbutton, panel toolbarbutton {
+  filter: saturate(0%);
+}
+
+#TabsToolbar toolbarbutton:hover, panel toolbarbutton:hover {
+  filter: saturate(100%);
+}
+
+toolbarbutton.titlebar-button { 
+  background: #1C2126;
+}
+
+toolbarbutton#titlebar-close:hover {
+  background: red;
+}
+
+hbox#nav-bar-customization-target {
+  background: #1C2126;
+}
+
+toolbox#navigator-toolbox::after {
+  background: #1C2126;
+}
+
+splitter#sidebar-splitter {
+  -moz-border-left-colors: #1C2126;
+  -moz-border-right-colors: #1C2126;
+}
+
+textbox#urlbar { 
+  background-color: #1C2126 !important;
+}
