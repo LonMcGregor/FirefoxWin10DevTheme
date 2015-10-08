@@ -1,3 +1,17 @@
+/* os control */
+toolbarbutton.titlebar-button { 
+  background: #1C2126;
+}
+
+toolbarbutton.titlebar-button:hover { 
+  background: #1A4666;
+}
+
+toolbarbutton#titlebar-close:hover {
+  background: #FF0000;
+}
+
+/*Aios tabs*/
 toolbarbutton.toolbarbutton-1.aios-tbutton:not(#downloads-button) {
   list-style-image: url("chrome://aios/skin/icons/toolbar_windows_inverted.png");
 }
@@ -6,43 +20,44 @@ toolbar#aios-toolbar toolbarbutton{
   border: none;
 }
 
+/* tab bar */
 deck iframe#tab-view {
   background: none;
 }
 
-toolbaritem#ctraddon_puib_separator {
-  background: none;
+tab.tabbrowser-tab {
+  box-shadow: none !important;
 }
 
-#TabsToolbar toolbarbutton, panel toolbarbutton {
+/* main bar */
+#nav-bar hbox#nav-bar-customization-target { 
+  background-color: #1A4666;
+}
+
+/* main bar - address */
+toolbox#navigator-toolbox::after, textbox#urlbar {
+  background: #1C2126 !important;
+}
+
+textbox#urlbar-wrapper > #urlbar {
+  border-color: #1C2126 !important;
+}
+
+/* main bar - buttons */
+#TabsToolbar toolbarbutton, panel toolbarbutton, #nav-bar hbox toolbarbutton {
   filter: saturate(0%);
 }
 
-#TabsToolbar toolbarbutton:hover, panel toolbarbutton:hover {
+#TabsToolbar toolbarbutton:hover, panel toolbarbutton:hover, #nav-bar hbox toolbarbutton:hover{
   filter: saturate(100%);
 }
 
-toolbarbutton.titlebar-button { 
-  background: #1C2126;
-}
-
-toolbarbutton#titlebar-close:hover {
-  background: red;
-}
-
-hbox#nav-bar-customization-target {
-  background: #1C2126;
-}
-
-toolbox#navigator-toolbox::after {
-  background: #1C2126;
+/* misc */
+toolbaritem#ctraddon_puib_separator {
+  background: none;
 }
 
 splitter#sidebar-splitter {
   -moz-border-left-colors: #1C2126;
   -moz-border-right-colors: #1C2126;
-}
-
-textbox#urlbar { 
-  background-color: #1C2126 !important;
 }

@@ -1,48 +1,63 @@
-vbox #sidebars-titlebutton > label:nth-child(1) {
-  color: black;
+/* os control */
+toolbarbutton.titlebar-button { 
+  background: #E3E4E6;
+}
+
+toolbarbutton.titlebar-button:hover { 
+  background: #4C9ED9;
+}
+
+toolbarbutton#titlebar-close:hover {
+  background: #FF0000;
+}
+
+/*Aios tabs*/
+toolbarbutton.toolbarbutton-1.aios-tbutton:not(#downloads-button) {
+  list-style-image: url("chrome://aios/skin/icons/toolbar_windows.png");
 }
 
 toolbar#aios-toolbar toolbarbutton{
   border: none;
 }
 
+/* tab bar */
 deck iframe#tab-view {
   background: none;
 }
 
-toolbaritem#ctraddon_puib_separator {
-  background: none;
+tab.tabbrowser-tab {
+  box-shadow: none !important;
 }
 
-#TabsToolbar toolbarbutton, panel toolbarbutton {
+/* main bar */
+#nav-bar hbox#nav-bar-customization-target { 
+  background-color: #4C9ED9;
+}
+
+/* main bar - address */
+toolbox#navigator-toolbox::after, textbox#urlbar {
+  background: #E3E4E6 !important;
+}
+
+textbox#urlbar-wrapper > #urlbar {
+  border-color: #E3E4E6 !important;
+}
+
+/* main bar - buttons */
+#TabsToolbar toolbarbutton, panel toolbarbutton, #nav-bar hbox toolbarbutton {
   filter: saturate(0%);
 }
 
-#TabsToolbar toolbarbutton:hover, panel toolbarbutton:hover {
+#TabsToolbar toolbarbutton:hover, panel toolbarbutton:hover, #nav-bar hbox toolbarbutton:hover{
   filter: saturate(100%);
 }
 
-toolbarbutton.titlebar-button { 
-  background: #E3E4E6;
-}
-
-toolbarbutton#titlebar-close:hover {
-  background: red;
-}
-
-hbox#nav-bar-customization-target {
-  background: #E3E4E6;
-}
-
-toolbox#navigator-toolbox::after {
-  background: #E3E4E6;
+/* misc */
+toolbaritem#ctraddon_puib_separator {
+  background: none;
 }
 
 splitter#sidebar-splitter {
   -moz-border-left-colors: #E3E4E6;
   -moz-border-right-colors: #E3E4E6;
-}
-
-textbox#urlbar { 
-  background-color: #E3E4E6 !important;
 }
