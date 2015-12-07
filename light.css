@@ -1,3 +1,10 @@
+/*
+White: #E3E4E6;
+Blue: #4C9ED9;
+Purp: #590c72
+window[privatebrowsingmode="temporary"]
+*/
+
 /* os control */
 toolbarbutton.titlebar-button { 
   background: #E3E4E6;
@@ -5,6 +12,10 @@ toolbarbutton.titlebar-button {
 
 toolbarbutton.titlebar-button:hover { 
   background: #4C9ED9;
+}
+
+window[privatebrowsingmode="temporary"] toolbarbutton.titlebar-button:hover{
+  background: #590c72;
 }
 
 toolbarbutton#titlebar-close:hover {
@@ -29,9 +40,21 @@ tab.tabbrowser-tab {
   box-shadow: none !important;
 }
 
+tab .tab-content[selected="true"] {
+  background-color: #4C9ED9;
+}
+
+window[privatebrowsingmode="temporary"] tab .tab-content[selected="true"]{
+  background-color: #590c72;
+}
+
 /* main bar */
 #nav-bar hbox#nav-bar-customization-target { 
   background-color: #4C9ED9;
+}
+
+window[privatebrowsingmode="temporary"] #nav-bar hbox#nav-bar-customization-target{
+  background: #590c72;
 }
 
 /* main bar - address */
@@ -42,6 +65,8 @@ toolbox#navigator-toolbox::after, textbox#urlbar {
 textbox#urlbar-wrapper > #urlbar {
   border-color: #E3E4E6 !important;
 }
+
+#urlbar { -moz-appearance: -moz-win-borderless-glass; }
 
 /* main bar - buttons */
 #TabsToolbar toolbarbutton, panel toolbarbutton, #nav-bar hbox toolbarbutton {

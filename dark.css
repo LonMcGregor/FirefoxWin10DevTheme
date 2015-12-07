@@ -1,3 +1,10 @@
+/*
+Black: #1C2126
+Blue: #1A4666
+Purp: #590c72
+window[privatebrowsingmode="temporary"]
+*/
+
 /* os control */
 toolbarbutton.titlebar-button { 
   background: #1C2126;
@@ -5,6 +12,10 @@ toolbarbutton.titlebar-button {
 
 toolbarbutton.titlebar-button:hover { 
   background: #1A4666;
+}
+
+window[privatebrowsingmode="temporary"] toolbarbutton.titlebar-button:hover{
+  background: #590c72;
 }
 
 toolbarbutton#titlebar-close:hover {
@@ -29,9 +40,21 @@ tab.tabbrowser-tab {
   box-shadow: none !important;
 }
 
+tab .tab-content[selected="true"] {
+  background-color: #1A4666;
+}
+
+window[privatebrowsingmode="temporary"] tab .tab-content[selected="true"]{
+  background-color: #590c72;
+}
+
 /* main bar */
 #nav-bar hbox#nav-bar-customization-target { 
   background-color: #1A4666;
+}
+
+window[privatebrowsingmode="temporary"] #nav-bar hbox#nav-bar-customization-target{
+  background: #590c72;
 }
 
 /* main bar - address */
@@ -43,6 +66,8 @@ textbox#urlbar-wrapper > #urlbar {
   border-color: #1C2126 !important;
 }
 
+#urlbar { -moz-appearance: -moz-win-borderless-glass; }
+
 /* main bar - buttons */
 #TabsToolbar toolbarbutton, panel toolbarbutton, #nav-bar hbox toolbarbutton {
   filter: saturate(0%);
@@ -53,6 +78,20 @@ textbox#urlbar-wrapper > #urlbar {
 }
 
 /* misc */
+toolbar#aios-toolbar {
+  background: #1C2126;
+  border: #1C2126;
+}
+
+sidebarheader#sidebar-header {
+  background: #1C2126;
+  border: #1C2126;
+}
+
+toolbarbutton#sidebars-titlebutton{
+  color :white;
+}
+
 toolbaritem#ctraddon_puib_separator {
   background: none;
 }
@@ -60,4 +99,11 @@ toolbaritem#ctraddon_puib_separator {
 splitter#sidebar-splitter {
   -moz-border-left-colors: #1C2126;
   -moz-border-right-colors: #1C2126;
+}
+
+@-moz-document url("chrome://tabgroups/content/tabview.xhtml") {
+   #content { 
+     background-image: url('chrome://fastdial-profile/content/themes/current/bg_alt_2.jpg');
+     background-size: cover;
+   }
 }
