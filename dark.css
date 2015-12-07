@@ -1,6 +1,7 @@
 /*
 Black: #1C2126
 Blue: #1A4666
+Hi-Blue: #1A6AB8
 Purp: #590c72
 window[privatebrowsingmode="temporary"]
 */
@@ -13,7 +14,6 @@ toolbarbutton.titlebar-button {
 toolbarbutton.titlebar-button:hover { 
   background: #1A4666;
 }
-
 window[privatebrowsingmode="temporary"] toolbarbutton.titlebar-button:hover{
   background: #590c72;
 }
@@ -66,7 +66,13 @@ textbox#urlbar-wrapper > #urlbar {
   border-color: #1C2126 !important;
 }
 
-#urlbar { -moz-appearance: -moz-win-borderless-glass; }
+#urlbar { 
+  -moz-appearance: -moz-win-borderless-glass;
+}
+#urlbar *::-moz-selection {
+  color: white;
+  background-color: #69aaea;
+}
 
 /* main bar - buttons */
 #TabsToolbar toolbarbutton, panel toolbarbutton, #nav-bar hbox toolbarbutton {
